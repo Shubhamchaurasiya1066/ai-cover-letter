@@ -1,16 +1,92 @@
-# React + Vite
+# 🤖 AI Cover Letter Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered web application that generates professional cover letters based on user input like skills, job role, and company details.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- ✨ Clean and responsive UI
+- 🤖 AI-generated cover letters
+- 🔗 Integrated with AI API (OpenRouter)
+- 🔄 Fallback logic (in case API fails)
+- ⏳ Loading state ("Generating...")
+- 📋 Copy to clipboard functionality
+- 🔐 Secure API key handling using .env
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Frontend: React (Vite)
+- Backend: Node.js + Express
+- API: OpenRouter
+- Styling: CSS
+
+---
+
+## ⚠️ Why OpenRouter Instead of Gemini?
+
+Initially, I tried integrating Google Gemini API (free tier). However, I faced multiple issues such as:
+
+- Model not found errors
+- API key validation problems
+- Limited access to available models in free tier
+
+Due to these limitations, the API responses were inconsistent and unreliable.
+
+To solve this, I switched to OpenRouter, which provides access to multiple free models and more stable responses.  
+I also implemented fallback logic to ensure the application always generates output even if the API fails.
+
+---
+
+## 📂 Project Structure
+ai-cover-letter/
+│
+├── src/
+│ ├── components/
+│ ├── App.jsx
+│ ├── api.js
+│
+├── server/
+│ ├── server.js
+│ ├── .env
+│
+├── README.md
+├── Prompts.md
+
+---
+
+### . Environment Variables
+
+Create a `.env` file inside `server` folder:
+
+---
+
+### . Run Project
+
+Start Backend:node server.js
+
+Start Frontend:npm run dev
+
+---
+
+## 🌐 Live Demo
+
+👉 (Add your Vercel link here)
+
+---
+
+## 📌 Learnings
+
+- AI API integration
+- Prompt engineering basics
+- Handling real-world API failures
+- Backend error handling
+- Full-stack development workflow
+
+---
+
+## 🙌 Author
+
+Shubham Chaurasiya
